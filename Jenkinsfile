@@ -1,27 +1,19 @@
 pipeline {
     agent any
     stages {
-    
-    stage('Build') {
+        stage('Build') {
             steps {
-                sh 'Build is started.................'
-                sh 'Build is Finished.................'
+                sh 'echo "Building..."'
             }
         }
         stage('Test') {
             steps {
-            
-            	sh 'Test is started.................'
-                sh 'mvn test'
+                sh 'echo "Testing..."'
             }
         }
-        
-        
         stage('Deploy') {
             steps {
-            
-            	sh 'Deploy is started.................'
-                sh 'Deploy is finished'
+                sh 'echo "Deploying..."'
             }
         }
     }
